@@ -12,4 +12,15 @@ describe('Testing server for different requests', () => {
       done();
     });
   });
+  test('Should return 200 status code for sucessful POST request', (done) => {
+    const request = {
+      method: 'POST',
+      url: '/users',
+      payload: JSON.stringify({ firstName: 'Shubham', lastName: 'Mathur' }),
+    };
+    Server.inject(request, (response) => {
+      expect(response.statusCode).toBe(200);
+      done();
+    });
+  });
 });
