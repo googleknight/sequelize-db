@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "NODE_ENV=test sequelize db:migrate:undo:all && NODE_ENV=test sequelize db:migrate && jest",
-    "start": "node_modules/.bin/sequelize model:generate"
+    "start": "node src/server.js"
   },
   "author": "",
   "license": "ISC",
