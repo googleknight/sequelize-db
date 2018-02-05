@@ -4,7 +4,12 @@ module.exports = [{
   method: 'GET',
   path: '/users',
   handler: (request, response) => {
-    response('Successful GET request');
+    Models.User.findAll().then((result) => {
+      response({
+        data: result,
+        responseCode: 200,
+      });
+    });
   },
 },
 ];

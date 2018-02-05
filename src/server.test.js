@@ -1,8 +1,8 @@
 const Server = require('./server');
 const Routes = require('../routes');
 
-describe('Testing the server', () => {
-  test('Should resturn success code on get request', (done) => {
+describe('Testing server for different requests', () => {
+  test('Should return 200 status code for sucessful GET request', (done) => {
     const request = {
       method: 'GET',
       url: '/users',
